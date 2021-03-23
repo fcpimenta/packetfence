@@ -278,11 +278,6 @@ sub radiusDisconnect {
 
 Overloading L<pf::Switch>'s implementation because Mikrotik have his own radius attributes.
 
-Don't forget to fill /usr/share/freeradius/dictionary.mikrotik with the following attributes:
-
-ATTRIBUTE       Mikrotik-Wireless-VlanID                26      integer
-ATTRIBUTE       Mikrotik-Wireless-VlanIDType            27      integer
-
 =cut
 
 sub returnRadiusAccessAccept {
@@ -301,7 +296,7 @@ sub returnRadiusAccessAccept {
     if ( (!$args->{'wasInline'} || ($args->{'wasInline'} && $args->{'vlan'} != 0) ) && isenabled($self->{_VlanMap})) {
         $radius_reply_ref = {
             'Mikrotik-Wireless-VlanID' => $args->{'vlan'} . "",
-            'Mikrotik-Wireless-VlanIDType' => "0",
+            'Mikrotik-Wireless-VlanID-Type' => "0",
         };
     }
 
