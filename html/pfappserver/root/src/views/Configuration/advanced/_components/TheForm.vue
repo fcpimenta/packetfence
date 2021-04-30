@@ -120,6 +120,11 @@
       :text="$i18n.t('Enable to bypass the operating system domain join verification.')"
     />
 
+    <form-group-netflow-kernel-module namespace="netflow_kernel_module"
+      :column-label="$i18n.t('Enable the netflow kernel module')"
+      :text="$i18n.t('Enable/Disable the netflow kernel module.')"
+    />
+
     <form-group-netflow-on-all-networks namespace="netflow_on_all_networks"
       :column-label="$i18n.t('NetFlow on all networks')"
       :text="$i18n.t('Listen to NetFlow on all networks. Changing this requires to restart pfacct.')"
@@ -155,6 +160,7 @@ import {
   FormGroupLocationlogCloseOnAccountingStop,
   FormGroupMultihost,
   FormGroupNetflowOnAllNetworks,
+  FormGroupNetflowKernelModule,
   FormGroupOpenidAttributes,
   FormGroupPffilterProcesses,
   FormGroupPfperlApiProcesses,
@@ -186,6 +192,7 @@ const components = {
   FormGroupLocationlogCloseOnAccountingStop,
   FormGroupMultihost,
   FormGroupNetflowOnAllNetworks,
+  FormGroupNetflowKernelModule,
   FormGroupOpenidAttributes,
   FormGroupPffilterProcesses,
   FormGroupPfperlApiProcesses,
