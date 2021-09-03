@@ -26,7 +26,7 @@ SRC_FULL_IMPORTDIR = $(SRC_ADDONSDIR)/full-import
 #
 # Golang
 #
-GOVERSION = go1.16.4
+GOVERSION = go1.17
 PF_BINARIES = pfhttpd pfdhcp pfdns pfstats pfdetect galera-autofix pfacct pfcertmanager pfcron
 
 #
