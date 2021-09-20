@@ -86,7 +86,7 @@ start_and_provision_other_vm() {
             # let time for the VM to boot before using ansible
             sleep 10
             ( cd ${VAGRANT_DIR}; \
-              ansible-playbook ${VAGRANT_DIR}/site.yml -l $vm )
+              ansible-playbook site.yml -l $vm )
         else
             echo "Machine $vm doesn't exist, start and provision with Vagrant"
             ( cd ${VAGRANT_DIR} ; \
